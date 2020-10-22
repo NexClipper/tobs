@@ -16,9 +16,10 @@ timescaledb-single:
   replicaCount: 1
   persistentVolumes:
     data:
-      size: 150Gi
+      storageClass: "rook-ceph-block"
+      size: 10Gi
     wal:
-      size: 20Gi
+      size: 2Gi
 
 # Values for configuring the deployment of the Promscale Connector
 # The charts README is at:
